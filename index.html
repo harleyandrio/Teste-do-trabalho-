@@ -57,6 +57,18 @@
             buttonNao.style.left = `${randomX}px`;
             buttonNao.style.top = `${randomY}px`;
         }
+
+        import { Client } from '@planetscale/database'
+
+const client = new Client({
+  host: "<mysql://xpfw9sxy2e9z2qcw5mwf:************@aws.connect.psdb.cloud/teste?ssl={"rejectUnauthorized>"
+  username: 'Admin',
+  password: 'xpfw9sxy2e9z2qcw5mwf'
+})
+
+const conn = client.connection()
+const results = await conn.execute('select 1 from dual')
+console.log(results)
     </script>
 </body>
 </html>
